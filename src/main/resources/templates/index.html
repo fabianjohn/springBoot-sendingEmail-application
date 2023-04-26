@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+<br><br>
+<h1 class="text-center">Sending Email</h1><br><br>
+    <div class="contact py-sm-5 py-4"> 
+ 		<div class="container py-xl-4 py-lg-2"> 
+		<!-- form -->
+		<form id="form"  th:action="@{/sendMail}" method="POST" >
+				<div class="contact-grids1 w3agile-6">
+					<div class="row">
+						<div class="col-md-6 col-sm-6 contact-form1 form-group">
+							<label class="col-form-label">Email</label>
+							<input type="email" class="form-control" placeholder="Enter mail" id="recipient" name="recipient" required="required">
+							
+						</div>
+						<div class="col-md-6 col-sm-6 contact-form1 form-group">
+							<label class="col-form-label"></label>
+							<textarea class="form-control" placeholder="msgBody" id="msgBody" rows="3" cols="45" name="msgBody" required="required"></textarea>
+							
+						</div>
+						
+						<div class="col-md-6 col-sm-6 contact-form1 form-group">
+							<label class="col-form-label">Subject</label>
+							<input type="text" class="form-control" placeholder="subject" name="subject" id="subject" required="required">
+							
+						</div>
+						
+						<div class="col-md-6 col-sm-6 contact-form1 form-group">
+							<label class="col-form-label">attachment</label>
+							<input type="file" class="form-control" placeholder="attachment" name="attachment" id="attachment" required="required">
+							
+						</div>
+						
+					</div>
+					
+						<div class="right-w3l col-md-6">
+							<input type="button" id="submit" class="btn btn-primary form-control" value="Submit">
+							<br><br>
+						</div>
+						<a href="/image/show" style="float:left;" class="btn btn-success text-right">Show All</a>
+				</div>
+				<br>
+				
+			</form>
+		</div>
+	</div>
+    <p class="text-center">
+  	 <img src="/images/loader.gif" alt="loader" style="width: 150px;height: 120px;" id="loader">
+   </p>
+	 <script src="/js/product.js"></script>
+
+</body>
+</html>
